@@ -1,0 +1,102 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Navegação padrão */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f1c40f; /* Cor de destaque ao passar o mouse */
+}
+
+/* Botão Get Started */
+.get-started {
+    padding: 8px 16px;
+    background-color: #f1c40f;
+    color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.get-started:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Estilos de hambúrguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+    transition: 0.4s;
+}
+
+/* Menu mobile */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links ul {
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Esconder menu padrão */
+    }
+
+    .hamburger {
+        display: flex; /* Exibir hambúrguer */
+    }
+}
